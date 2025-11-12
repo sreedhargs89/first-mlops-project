@@ -1,0 +1,86 @@
+{
+  "timestamp": "2025-11-12T10:07:49.136406",
+  "production_samples": 200,
+  "overall_drift_detected": true,
+  "ks_test_results": {
+    "Pregnancies": {
+      "ks_statistic": 0.16708333333333333,
+      "p_value": 0.00024129440588545467,
+      "drift_detected": true,
+      "baseline_mean": 3.8450520833333335,
+      "production_mean": 4.56,
+      "mean_shift": 0.7149479166666661
+    },
+    "Glucose": {
+      "ks_statistic": 0.29,
+      "p_value": 2.7566375327036393e-12,
+      "drift_detected": true,
+      "baseline_mean": 120.89453125,
+      "production_mean": 139.40941895094454,
+      "mean_shift": 18.51488770094454
+    },
+    "BloodPressure": {
+      "ks_statistic": 0.052083333333333336,
+      "p_value": 0.7590421344272866,
+      "drift_detected": false,
+      "baseline_mean": 69.10546875,
+      "production_mean": 71.47038819355292,
+      "mean_shift": 2.364919443552921
+    },
+    "BMI": {
+      "ks_statistic": 0.18729166666666666,
+      "p_value": 2.3896017774376578e-05,
+      "drift_detected": true,
+      "baseline_mean": 31.992578124999998,
+      "production_mean": 34.60773223385873,
+      "mean_shift": 2.6151541088587287
+    },
+    "Age": {
+      "ks_statistic": 0.61140625,
+      "p_value": 1.9526498361327905e-56,
+      "drift_detected": true,
+      "baseline_mean": 33.240885416666664,
+      "production_mean": 56.13,
+      "mean_shift": 22.88911458333334
+    }
+  },
+  "psi_results": {
+    "Pregnancies": {
+      "psi": 0.23986465138574345,
+      "severity": "Significant change",
+      "action": "Retrain model immediately"
+    },
+    "Glucose": {
+      "psi": 0.4035688814715548,
+      "severity": "Significant change",
+      "action": "Retrain model immediately"
+    },
+    "BloodPressure": {
+      "psi": 0.1341004656244893,
+      "severity": "Moderate change",
+      "action": "Investigate and prepare for retraining"
+    },
+    "BMI": {
+      "psi": 0.1413121310613391,
+      "severity": "Moderate change",
+      "action": "Investigate and prepare for retraining"
+    },
+    "Age": {
+      "psi": 3.2060251379544624,
+      "severity": "Significant change",
+      "action": "Retrain model immediately"
+    }
+  },
+  "drift_features_ks": [
+    "Pregnancies",
+    "Glucose",
+    "BMI",
+    "Age"
+  ],
+  "high_psi_features": [
+    "Pregnancies",
+    "Glucose",
+    "Age"
+  ],
+  "recommendation": "RETRAIN"
+}
